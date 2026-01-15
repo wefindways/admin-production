@@ -27,11 +27,11 @@ export const data = {
       items: [
         {
           title: "View All Projects",
-          url: "#",
+          url: "all-projects",
         },
         {
           title: "Add New Project",
-          url: "#",
+          url: "add-projects",
         },
       ],
     },
@@ -42,11 +42,11 @@ export const data = {
       items: [
         {
           title: "Team Directory",
-          url: "#",
+          url: "team-directory",
         },
         {
           title: "Roles & Permissions",
-          url: "#",
+          url: "roles",
         },
       ],
     },
@@ -57,11 +57,11 @@ export const data = {
       items: [
         {
           title: "Manage Images",
-          url: "#",
+          url: "manage-images",
         },
         {
           title: "Project Showcase",
-          url: "#",
+          url: "project-showcase",
         }
       ]
     },
@@ -83,11 +83,11 @@ export const data = {
       items: [
         {
           title: "Service List",
-          url: "#",
+          url: "service-list",
         },
         {
           title: "Add / Edit Services",
-          url: "#",
+          url: "update-services",
         },
       ],
     },
@@ -98,11 +98,11 @@ export const data = {
       items: [
         {
           title: "Profile Settings",
-          url: "#",
+          url: "profile-settings",
         },
         {
           title: "Firm Info",
-          url: "#",
+          url: "firm-info",
         },
       ],
     },
