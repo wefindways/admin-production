@@ -6,13 +6,14 @@ import {
   BreadcrumbLink,
   BreadcrumbSeparator,
   BreadcrumbPage,
-} from "../navigation/breadcrumb";
-import { SidebarTrigger, SidebarFooter } from "../ui/sidebar";
+} from "../../navigation/breadcrumb";
+import { SidebarTrigger, SidebarFooter } from "../../ui/sidebar";
 import { Separator } from "@radix-ui/react-separator";
-import { NavUser } from "../navigation/nav-user";
+import { NavUser } from "../../navigation/nav-user";
 
 // Sample data
 import { data as sidebarData } from "@/hooks/sample-data";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 
 export default function Header() {
   return (
@@ -44,6 +45,8 @@ export default function Header() {
         </div>
 
         <div className="flex h-16 shrink-0 items-center gap-2 px-4">
+
+          <ModeToggle />
           <SidebarFooter>
             <NavUser user={sidebarData.user} />
           </SidebarFooter>
