@@ -3,6 +3,7 @@ import Dashboard from "./pages/dashboard";
 import Layout from "./layout/layout";
 import Login from "./pages/login";
 import ProtectedRoute from "./auth/context/ProtectedRoute";
+import AllProject from "./pages/projects/all-projects";
 
 const App = () => {
   return (
@@ -16,6 +17,14 @@ const App = () => {
             <ProtectedRoute>
               <Dashboard />
             </ProtectedRoute>} />
+
+        <Route
+          path="/all-projects"
+          element={
+            <ProtectedRoute>
+              <AllProject />
+            </ProtectedRoute>} />
+
       </Route>
     </Routes>
   );

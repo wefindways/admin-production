@@ -27,7 +27,7 @@ export const data = {
       items: [
         {
           title: "View All Projects",
-          url: "#",
+          url: "all-projects",
         },
         {
           title: "Add New Project",
