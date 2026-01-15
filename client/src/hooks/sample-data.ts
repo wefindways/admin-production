@@ -1,5 +1,4 @@
 import {
-  MessageCircleMore,
   Wrench,
   ShieldHalf,
   Images,
@@ -27,46 +26,11 @@ export const data = {
       icon: FolderOpenDot,
       items: [
         {
-          title: "All Projects",
+          title: "View All Projects",
           url: "#",
         },
         {
-          title: "Ongoing Projects",
-          url: "#",
-        },
-        {
-          title: "Completed Projects",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Gallery",
-      url: "#",
-      icon: Images,
-    },
-    {
-      title: "Inquiries",
-      url: "#",
-      icon: MessageCircleMore,
-      items: [
-        {
-          title: "Message Request",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Services",
-      url: "#",
-      icon: Wrench,
-      items: [
-        {
-          title: "Manage Services",
-          url: "#",
-        },
-        {
-          title: "Edit Service Descriptions",
+          title: "Add New Project",
           url: "#",
         },
       ],
@@ -77,11 +41,52 @@ export const data = {
       icon: ShieldHalf,
       items: [
         {
-          title: "Team Members",
+          title: "Team Directory",
           url: "#",
         },
         {
-          title: "Roles",
+          title: "Roles & Permissions",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Portfolio",
+      url: "#",
+      icon: Images,
+      items: [
+        {
+          title: "Manage Images",
+          url: "#",
+        },
+        {
+          title: "Project Showcase",
+          url: "#",
+        }
+      ]
+    },
+    // {
+    //   title: "Inquiries",
+    //   url: "#",
+    //   icon: MessageCircleMore,
+    //   items: [
+    //     {
+    //       title: "Message Request",
+    //       url: "#",
+    //     },
+    //   ],
+    // },
+    {
+      title: "Services",
+      url: "#",
+      icon: Wrench,
+      items: [
+        {
+          title: "Service List",
+          url: "#",
+        },
+        {
+          title: "Add / Edit Services",
           url: "#",
         },
       ],
@@ -92,11 +97,11 @@ export const data = {
       icon: Settings,
       items: [
         {
-          title: "Contact",
+          title: "Profile Settings",
           url: "#",
         },
         {
-          title: "Logo & Branding",
+          title: "Firm Info",
           url: "#",
         },
       ],

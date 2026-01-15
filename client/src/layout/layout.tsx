@@ -1,7 +1,8 @@
-import Header from "@/components/layout/app-header";
-import { AppSidebar } from "@/components/layout/app-sidebar";
+import Header from "@/components/layout/header/app-header";
+import { AppSidebar } from "@/components/layout/sidebar/app-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { Outlet } from "react-router-dom";
+import Footer from "@/components/layout/footer/footer";
 
 export default function Layout() {
   return (
@@ -21,7 +22,7 @@ export default function Layout() {
           </main>
 
           <footer>
-            <p><a href="/">BACK TO LOGIN</a></p>
+            <Footer />
           </footer>
         </div>
       </div>

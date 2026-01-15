@@ -13,6 +13,8 @@ import {
 import logo from "@/assets/archa-logo.png";
 import collapsedLogo from "@/assets/collapsed-logo.png";
 
+import { Link } from "react-router-dom";
+
 import { data as sidebarData } from "@/hooks/sample-data";
 
 export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
@@ -24,7 +26,7 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
     >
       <Sidebar collapsible="icon" {...props}>
         <div className="border-b">
-          <header className="flex h-16 items-center px-3">
+          <Link to="/" className="flex h-16 items-center px-3">
             {/* Full logo (expanded) */}
             <img
               src={logo}
@@ -42,7 +44,7 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
               hidden h-5 w-50 object-contain
               group-data-[collapsible=icon]:block"
             />
-          </header>
+          </Link>
         </div>
 
         <SidebarContent>
