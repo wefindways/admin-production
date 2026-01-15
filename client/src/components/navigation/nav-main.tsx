@@ -37,6 +37,7 @@ export function NavMain({
       <SidebarMenu>
         {items.map((item) =>
           item.items?.length ? (
+            // COLLAPSIBLE item
             <Collapsible
               key={item.title}
               asChild
