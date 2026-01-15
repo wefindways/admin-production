@@ -5,6 +5,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
+
 import {
   SidebarGroup,
   SidebarMenu,
@@ -14,6 +15,8 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
+
+import { NavLink } from "react-router-dom"
 
 export function NavMain({
   items,
@@ -34,7 +37,7 @@ export function NavMain({
       <SidebarMenu>
         {items.map((item) =>
           item.items?.length ? (
-            // 🔽 COLLAPSIBLE ITEM
+            // COLLAPSIBLE item
             <Collapsible
               key={item.title}
               asChild
@@ -54,11 +57,16 @@ export function NavMain({
                   <SidebarMenuSub>
                     {item.items.map((subItem) => (
                       <SidebarMenuSubItem key={subItem.title}>
-                        <SidebarMenuSubButton asChild>
-                          <a href={subItem.url}>
-                            <span>{subItem.title}</span>
-                          </a>
-                        </SidebarMenuSubButton>
+                        <NavLink to={subItem.url} >
+                          {({ isActive }) => (
+                            <SidebarMenuSubButton
+                              asChild
+                              isActive={isActive}
+                            >
+                              <span>{subItem.title}</span>
+                            </SidebarMenuSubButton>
+                          )}
+                        </NavLink>
                       </SidebarMenuSubItem>
                     ))}
                   </SidebarMenuSub>
@@ -66,18 +74,23 @@ export function NavMain({
               </SidebarMenuItem>
             </Collapsible>
           ) : (
-            // 🔹 NORMAL ITEM (Dashboard)
+            // NORMAL ITEM (Dashboard)
             <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton asChild tooltip={item.title}>
-                <a href={item.url}>
-                  {item.icon && <item.icon />}
-                  <span>{item.title}</span>
-                </a>
-              </SidebarMenuButton>
+              <NavLink to={item.url} end>
+                {({ isActive }) => (
+                  <SidebarMenuButton asChild isActive={isActive} tooltip={item.title}>
+                    <span className="flex items-center gap-2">
+                      {item.icon && <item.icon />}
+                      <span>{item.title}</span>
+                    </span>
+                  </SidebarMenuButton>
+                )}
+              </NavLink>
             </SidebarMenuItem>
           )
-        )}
-      </SidebarMenu>
-    </SidebarGroup>
+        )
+        }
+      </SidebarMenu >
+    </SidebarGroup >
   )
 }
