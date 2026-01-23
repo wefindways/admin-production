@@ -2,7 +2,6 @@ import Header from "@/components/layout/header/app-header";
 import { AppSidebar } from "@/components/layout/sidebar/app-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { Outlet } from "react-router-dom";
-import Footer from "@/components/layout/footer/footer";
 
 export default function Layout() {
   return (
@@ -17,13 +16,9 @@ export default function Layout() {
             <Header />
           </header>
 
-          <main className="flex-1">
+          <main className="flex-1 p-2">
             <Outlet />
           </main>
-
-          <footer>
-            <Footer />
-          </footer>
         </div>
       </div>
     </SidebarProvider>

@@ -26,8 +26,7 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
     >
       <Sidebar collapsible="icon" {...props}>
         <div className="border-b">
-          <Link to="/" className="flex h-16 items-center px-3">
-            {/* Full logo (expanded) */}
+          <Link to="#" className="flex h-16 items-center px-3">
             <img
               src={logo}
               alt="Archa logo"
@@ -36,7 +35,6 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
               group-data-[collapsible=icon]:hidden"
             />
 
-            {/* A mark (collapsed) */}
             <img
               src={collapsedLogo}
               alt="Archa mark"
