@@ -20,83 +20,37 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Login />} />
 
-      <Route element={<Layout />}>
-        <Route
-          path="/dashboard"
-          element={
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>} />
+      <Route element={<ProtectedRoute />}>
+        <Route element={<Layout />}>
+        
+          <Route path="dashboard" element={<Dashboard />} />
 
-        <Route
-          path="/all-projects"
-          element={
-            <ProtectedRoute>
-              <AllProject />
-            </ProtectedRoute>} />
+          <Route path="projects">
+            <Route path="all-projects" element={<AllProject />} />
+            <Route path="add-projects" element={<AddProject />} />
+          </Route>
 
-        <Route
-          path="/add-projects"
-          element={
-            <ProtectedRoute>
-              <AddProject />
-            </ProtectedRoute>} />
+          <Route path="team">
+            <Route path="team-directory" element={<TeamDirectory />} />
+            <Route path="roles" element={<Roles />} />
+          </Route>
 
-        <Route
-          path="/team-directory"
-          element={
-            <ProtectedRoute>
-              <TeamDirectory />
-            </ProtectedRoute>} />
+          <Route path="portfolio">
+            <Route path="manage-images" element={<ManageImages />} />
+            <Route path="project-showcase" element={<ProjectShowcase />} />
+          </Route>
 
-        <Route
-          path="/roles"
-          element={
-            <ProtectedRoute>
-              <Roles />
-            </ProtectedRoute>} />
+          <Route path="services">
+            <Route path="service-list" element={<ServiceList />} />
+            <Route path="update-services" element={<UpdateServices />} />
+          </Route>
 
-        <Route
-          path="/manage-images"
-          element={
-            <ProtectedRoute>
-              <ManageImages />
-            </ProtectedRoute>} />
+          <Route path="settings">
+            <Route path="profile-settings" element={<ProfileSettings />} />
+            <Route path="firm-info" element={<FirmInfo />} />
+          </Route>
 
-        <Route
-          path="/project-showcase"
-          element={
-            <ProtectedRoute>
-              <ProjectShowcase />
-            </ProtectedRoute>} />
-
-        <Route
-          path="/service-list"
-          element={
-            <ProtectedRoute>
-              <ServiceList />
-            </ProtectedRoute>} />
-
-        <Route
-          path="/update-services"
-          element={
-            <ProtectedRoute>
-              <UpdateServices />
-            </ProtectedRoute>} />
-
-        <Route
-          path="/profile-settings"
-          element={
-            <ProtectedRoute>
-              <ProfileSettings />
-            </ProtectedRoute>} />
-
-        <Route
-          path="/firm-info"
-          element={
-            <ProtectedRoute>
-              <FirmInfo />
-            </ProtectedRoute>} />
+        </Route>
       </Route>
     </Routes>
   );

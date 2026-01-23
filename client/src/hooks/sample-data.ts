@@ -22,46 +22,46 @@ export const data = {
     },
     {
       title: "Projects",
-      url: "#",
+      url: "projects",
       icon: FolderOpenDot,
       items: [
         {
           title: "View All Projects",
-          url: "all-projects",
+          url: "projects/all-projects",
         },
         {
           title: "Add New Project",
-          url: "add-projects",
+          url: "projects/add-projects",
         },
       ],
     },
     {
       title: "Team",
-      url: "#",
+      url: "team",
       icon: ShieldHalf,
       items: [
         {
           title: "Team Directory",
-          url: "team-directory",
+          url: "team/team-directory",
         },
         {
           title: "Roles & Permissions",
-          url: "roles",
+          url: "team/roles",
         },
       ],
     },
     {
       title: "Portfolio",
-      url: "#",
+      url: "portfolio",
       icon: Images,
       items: [
         {
           title: "Manage Images",
-          url: "manage-images",
+          url: "portfolio/manage-images",
         },
         {
           title: "Project Showcase",
-          url: "project-showcase",
+          url: "portfolio/project-showcase",
         }
       ]
     },
@@ -78,31 +78,31 @@ export const data = {
     // },
     {
       title: "Services",
-      url: "#",
+      url: "services",
       icon: Wrench,
       items: [
         {
           title: "Service List",
-          url: "service-list",
+          url: "services/service-list",
         },
         {
           title: "Add / Edit Services",
-          url: "update-services",
+          url: "services/update-services",
         },
       ],
     },
     {
       title: "Settings",
-      url: "#",
+      url: "settings",
       icon: Settings,
       items: [
         {
           title: "Profile Settings",
-          url: "profile-settings",
+          url: "settings/profile-settings",
         },
         {
           title: "Firm Info",
-          url: "firm-info",
+          url: "settings/firm-info",
         },
       ],
     },
