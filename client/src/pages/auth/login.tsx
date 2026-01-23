@@ -18,10 +18,10 @@ export default function Login() {
         className="w-full max-w-md"
       >
         <div className="text-center mb-10">
-          <h1 className="text-3xl md:text-4xl font-bold">
+          <h1 className="text-3xl md:text-4xl font-bold text-slate-700">
             Admin Login
           </h1>
-          <p className="text-gray-500 text-base md:text-lg mt-2">
+          <p className=" text-muted-foreground text-base md:text-lg mt-2">
             Please sign in to start your session
           </p>
         </div>
