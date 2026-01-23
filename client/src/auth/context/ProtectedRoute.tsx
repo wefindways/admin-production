@@ -1,15 +1,14 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 import { useAuth } from "./AuthContext";
-import type { PropsWithChildren } from "react";
 
-export default function ProtectedRoute({ children }: PropsWithChildren) {
+export default function ProtectedRoute() {
   const { authorized, loading } = useAuth();
 
-  if (loading) return null; // or spinner
+  if (loading) return null; 
 
   if (!authorized) {
     return <Navigate to="/" replace />;
   }
 
-  return children;
+  return <Outlet />;
 }
