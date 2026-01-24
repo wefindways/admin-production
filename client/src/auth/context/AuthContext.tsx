@@ -13,7 +13,7 @@ type AuthContextType = {
   user: User | null;
   authorized: boolean;
   email: string | null;
-  role: "admin" | "user" | null;
+  role: "Admin" | "Editor" | null;
   loading: boolean;
 };
 
@@ -22,7 +22,7 @@ const AuthContext = createContext<AuthContextType | null>(null);
 export const AuthProvider = ({ children }: PropsWithChildren) => {
   const [user, setUser] = useState<User | null>(null);
   const [email, setEmail] = useState<string | null>(null);
-  const [role, setRole] = useState<"admin" | "user" | null>(null);
+  const [role, setRole] = useState<"Admin" | "Editor" | null>(null);
   const [authorized, setAuthorized] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
         const isAdmin = Boolean(claims.admin);
 
         setAuthorized(isAdmin);
-        setRole(isAdmin ? "admin" : "user");
+        setRole(isAdmin ? "Admin" : "Editor");
       } else {
         setUser(null);
         setEmail(null);
