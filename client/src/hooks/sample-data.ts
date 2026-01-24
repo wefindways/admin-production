@@ -8,11 +8,6 @@ import {
 } from "lucide-react";
 
 export const data = {
-  user: {
-    name: "shadcn",
-    email: "marcjosephcruz24@gmail.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
   navMain: [
     {
       title: "Dashboard",
